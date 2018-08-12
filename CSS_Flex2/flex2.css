@@ -1,0 +1,28 @@
+.box1{background-color:red}
+.box2{background-color:green}
+.box3{background-color:yellow}
+.box4{background-color:tan}
+.box5{background-color:rebeccapurple}
+.box6{background-color:firebrick}
+.box7{background-color:floralwhite}
+.box8{background-color:violet}
+.box9{background-color:beige}
+.box10{background-color:blue}
+
+.container{
+    display: flex;
+    border: 10px solid goldenrod;
+    height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.box{
+    color: aliceblue;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.box{
+    width: calc(33.333333% - 20px);
+}

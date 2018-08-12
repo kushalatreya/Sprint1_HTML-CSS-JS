@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+        flex-wrap: wrap-reverse;
+
 }
 
 body {
@@ -14,7 +16,7 @@ body {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     padding: 0 4px;
 }
 
@@ -28,12 +30,12 @@ body {
 
 .column img {
     margin-top: 10px;
-    vertical-align: baseline;
+    vertical-align: bottom;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     .column {
         flex: 50%;
         max-width: 50%;
@@ -42,7 +44,7 @@ body {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .column {
         flex: 80%;
         max-width: 100%;

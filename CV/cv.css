@@ -30,6 +30,8 @@ img{
     width: 280px;
     height: 800px;
     float: left; 
+        border: 5px solid black;
+
     /*this will keep the div in the left side 
      so we can push the another container in right side.*/
 }
@@ -51,7 +53,6 @@ img{
 .containerLeft2{
     width: 250px;
     height: 200px;  
-    
     margin-bottom: 05%;
     float: left;
 
