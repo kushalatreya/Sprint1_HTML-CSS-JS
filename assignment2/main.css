@@ -1,0 +1,107 @@
+header {
+    /* header starts from here*/
+    width: 100%;
+    border-bottom: 10px solid transparent;
+    border-image: url(./templateImage/Border-BG.jpg) 30 round;
+    background-color: #383838;
+    height: 500px;
+}
+.headerWrapper {
+    display:flex;
+    justify-content: center;
+}
+/*
+.relative{
+    width: 50%;
+    height: 14%;
+    background-color: #4587C3;
+    margin-left: 25%;
+    position: relative;
+    text-align: center;
+}
+.absolute {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 100px 100px 0 0px;
+    border-color: red transparent transparent transparent;
+    position: absolute;
+    bottom: -1;
+    left: 0;
+}*/
+.learnMore { /* This is the learn more link in the header*/
+    border: 8px solid #4587C3;
+    border-radius: 4%;
+    color: white;
+    background-color: #4587C3;
+    font-size: 28px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+/* header is seperated in two class, headerItem 1 and 2*/
+.headerItem1>img {
+    width: 550px;
+    height: 400px;
+}
+/*  this headerItem2 has 3 elements which are aranged in CSS Grid*/
+.headerItem2 {
+    display:grid;
+    grid-template-rows: 1fr 1fr 2fr; 
+    /* The last grid has 2fr so, it could come up from the header bottom */
+    grid-gap: 20px;
+    color: white;
+}
+
+.mainBody{
+    background-color: #EFEFEF
+}
+
+/* Main body has 3 parts, aside from header and footer, body1, 2, 3*/
+.body1{
+    padding: 6%;
+    /* this is the first section after the header, 4 columns are alligned
+    in CSS Grid*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* all the grid are given same space. */
+    grid-gap: 30px;
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 10px solid transparent;
+    border-image: url(./templateImage/Border-BG.jpg) 30 round;
+}
+.body1>span:hover {
+    background-color: white;
+}
+body1>span:hover.fas {
+    background-color: white;
+}
+
+.body1 a:hover{
+    display: none;
+}
+
+.body1 i:hover {
+    background-color: #4990D4;
+}
+
+i{
+    border: 2px solid black;
+    background-color: #383838;
+    border-radius: 50%;
+    padding: 20px;
+    color: white;
+    
+}
+
+.body2{
+    padding: 4%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    justify-items: stretch;
+    align-items:center;     
+}

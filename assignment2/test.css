@@ -1,0 +1,22 @@
+.body2  {
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    background-color: #2196F3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-shrink: 20;
+
+
+    
+
+    
+}
+
+.body2  img{
+    border: solid yellow;
+    height: 350px;
+    width: 400px;
+    
+}
