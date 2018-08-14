@@ -13,20 +13,7 @@
     min-height: 0;
     justify-content: space-around;
 }
-/*
-.work1{
-    grid-column: 1/2;
-    background: #FFFFFF;
-}
-.work2{
-    grid-column: 2/3;
-    background: #FFFFFF;
-}
-.work3{
-    grid-column: 3/4;
-    background: #FFFFFF;
-}
-*/
+
 
 .work1 img {
     max-width: 100%;
