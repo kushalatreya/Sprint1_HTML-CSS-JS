@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 header {
     /* header starts from here*/
     width: 100%;
@@ -10,25 +13,7 @@ header {
     display:flex;
     justify-content: center;
 }
-/*
-.relative{
-    width: 50%;
-    height: 14%;
-    background-color: #4587C3;
-    margin-left: 25%;
-    position: relative;
-    text-align: center;
-}
-.absolute {
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 100px 100px 0 0px;
-    border-color: red transparent transparent transparent;
-    position: absolute;
-    bottom: -1;
-    left: 0;
-}*/
+
 .learnMore { /* This is the learn more link in the header*/
     border: 8px solid #4587C3;
     border-radius: 4%;
@@ -97,11 +82,97 @@ i{
     
 }
 
-.body2{
-    padding: 4%;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+Recent Work is the section starting just after body1,
+.tede {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    grid-gap: 4em;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
-    justify-items: stretch;
-    align-items:center;     
+}
+
+.testimonials section {
+    padding: 1em;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+}
+
+.testimonials section p {}
+
+.development {
+    display: grid;
+    padding: 2em;
+}
+
+#tabs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#tabs label {
+    background: #eee;
+    padding: 0.7em 1em;
+    cursor: pointer;
+    z-index: 1;
+    margin-left: -1px;
+}
+
+#tabs label:first-of-type {
+    margin-left: 0;
+}
+
+.tab-content {
+    width: 100%;
+    padding: 1em;
+    order: 1;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    background: #fff;
+}
+
+.tab-content button {
+    background: #4f8ccd;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1em 3em;
+    border-radius: 3px;
+    margin-left: auto;
+}
+
+#tabs input[type='radio'],
+.tab-content {
+    display: none;
+}
+
+#tabs input[type='radio']:checked+label {
+    background: #fff;
+    border-bottom: 0px solid #fff;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.46);
+}
+
+#tabs input[type='radio']:checked+label+.tab-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.recentWork {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.recentWork img {
+    width: 100%
+}
+
+.recentWork section {
+    display: flex;
+    flex-direction: column;
+    width: 30%
 }
