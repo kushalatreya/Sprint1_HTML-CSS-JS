@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
 }
+
+/*=================================
+    NAVIGATION
+==================================*/
 nav {
     display: grid;
     grid-template-columns: repeat(minmax(250px, 1fr), auto-fit);
@@ -27,35 +31,62 @@ nav {
     align-content: center;
 }
 
-li{
+.nav li{
     border: 2px solid grey;
     background-color: aliceblue;
     border-radius: 6%;
     
 }
-
-.belowNav{
-    display: grid;
-    grid-auto-flow: column;
-}
-
-.threeImage{
-    margin-top: 6em;
-    border: 2px solid red;
-    display: grid;
-    grid-auto-flow: column;
-    grid-gap: 1em;
-    justify-content: start;
-}
-
-.threeImage img{
+/*============================================
+    Below Navigation, 3 images and smilng man.
+==============================================*/
+.threeImage img {
     width: 150px;
     height: 150px;
     border-radius: 50%
 }
 
-.threeImage div{
+.belowNav {
+    border: solid 2px red;
     display: grid;
-    grid-auto-flow: row;
+    grid-gap: 1em;
+}
+
+.belowNavWrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.smilingMan {
+    border: 2px solid red;
+
+}
+
+
+
+/*============================================
+    Blog starts from here, it is above footer.
+==============================================*/
+
+.blog{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1em;
+}
+
+/*=============
+    FOOTER
+==============*/
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+footer div{
+    display: grid;
+    justify-content: center;
 
 }

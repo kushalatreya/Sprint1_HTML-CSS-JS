@@ -1,0 +1,17 @@
+.threeImage img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%
+}
+.belowNav{
+    border: solid 2px red;
+
+}
+.belowNavWrapper{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+}
+.smilingMan{
+    border: 2px solid red;
+}
