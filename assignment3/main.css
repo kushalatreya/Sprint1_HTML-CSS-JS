@@ -11,6 +11,7 @@ nav {
     grid-auto-flow: column;
     width: 100%;
     border: 2px solid blue;
+    background-color: #FFFFFF;
     
 }
 
@@ -32,9 +33,10 @@ nav {
 }
 
 .nav li{
-    border: 2px solid grey;
-    background-color: aliceblue;
+    border: 2px solid #DCDDDB;
+    background-color: #DCDDDB;
     border-radius: 6%;
+    text-align: center;
     
 }
 /*============================================
@@ -80,13 +82,42 @@ nav {
     FOOTER
 ==============*/
 footer{
+    background-color: #DDDDDD;
+}
+.footerWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 1em;
 }
 
-footer div{
+.footerWrapper div {
     display: grid;
     justify-content: center;
+    text-align: center;
+    border: 2px solid red;
 
+}
+
+.footerWrapper span{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid red;
+    align-content: center;
+    justify-content: center;
+    grid-gap: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+i{
+    border: 2px solid yellow;
+    font-size: 2em;
+    margin: 1em;
+}
+
+.copyRight {
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    margin-top: 1em;
+    color: grey;
 }
