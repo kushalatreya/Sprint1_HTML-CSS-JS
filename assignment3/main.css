@@ -1,6 +1,22 @@
 *{
-    box-sizing: border-box;
+   box-sizing: border-box;
+   font-family: "Montserrat",sans-serif;
+   
 }
+:root {
+    --textBlue: #324e5c;
+    --gradTop: #e2e9eb;
+    --gradBot: #bed2d8;
+    --blogSpan: #bbbbbb;
+}
+h3,
+h2,
+li,
+i,
+p {
+    color: var(--textBlue);
+}
+
 
 /*=================================
     NAVIGATION
@@ -12,8 +28,8 @@ nav {
     width: 100%;
     border: 2px solid blue;
     background-color: #FFFFFF;
-    
 }
+
 
 .logo {
     display: grid;
@@ -23,7 +39,7 @@ nav {
     justify-content: end;
 }
 
-.nav {
+.navMenu {
     list-style-type: none;
     display: grid;
     grid-auto-flow: column;
@@ -32,41 +48,40 @@ nav {
     align-content: center;
 }
 
-.nav li{
+.navMenu li{
     border: 2px solid #DCDDDB;
     background-color: #DCDDDB;
     border-radius: 6%;
     text-align: center;
+    font-size: 2.01rem;
     
 }
 /*============================================
     Below Navigation, 3 images and smilng man.
 ==============================================*/
-.threeImage img {
+.threeRoundImages img {
     width: 150px;
     height: 150px;
-    border-radius: 50%
+    border-radius: 50%;
+    margin-top: 14%;
 }
 
-.belowNav {
+.belowNavColLeft {
     border: solid 2px red;
     display: grid;
-    grid-gap: 1em;
 }
 
 .belowNavWrapper {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
-    
+    border: 2px solid green;
+    background-image: linear-gradient(to bottom, var(--gradTop), var(--gradBot));
 }
-
 .smilingMan {
     border: 2px solid red;
 
 }
-
-
 
 /*============================================
     Blog starts from here, it is above footer.
@@ -76,8 +91,64 @@ nav {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 1em;
+    margin-bottom: 2em;
+    line-height: 1.4em;
+
 }
 
+.blog span{
+    font-size: 0.8rem;
+    color: var(--blogSpan);
+    margin: 0.6rem 0 1rem 0;
+    border-bottom: 1px dashed var(--blogSpan);
+}
+
+.blog .col1 span:last-child{
+    border: none;
+}
+
+.blog .col2 img{
+float: left;
+margin: 0.5em;
+}
+
+.blog .col2 h3{
+    text-transform: uppercase;
+}
+
+.blog .col2 span:first-child{
+    padding:100px;
+}
+
+.blog .col2 span:last-child{
+    border: none;
+}
+.blog .col3 ul{
+        list-style: none;
+        margin-left: 0;
+        padding-left: 1em;
+
+}
+
+.col3 ul>li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+}
+
+.col3 li{
+        border-bottom: 1px dashed var(--blogSpan);
+}
+
+.col3 li:last-child{
+    border: none;
+}
+
+.col3 h3{
+    text-transform: uppercase;
+
+}
 /*=============
     FOOTER
 ==============*/
@@ -87,6 +158,7 @@ footer{
 .footerWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
 }
 
 .footerWrapper div {
