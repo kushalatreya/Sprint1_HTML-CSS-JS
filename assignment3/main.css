@@ -3,7 +3,8 @@
    font-family: "Montserrat",sans-serif;
    
 }
-:root {
+:root { /* Assaigning the color code, to be 
+    used below.*/
     --textBlue: #324e5c;
     --gradTop: #e2e9eb;
     --gradBot: #bed2d8;
@@ -90,6 +91,8 @@ nav {
 .blog{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    /* assigning the column size, medium col. is 2
+    times larger than the side col. */
     grid-gap: 1em;
     margin-bottom: 2em;
     line-height: 1.4em;
@@ -121,7 +124,9 @@ margin: 0.5em;
 }
 
 .blog .col2 span:last-child{
-    border: none;
+    border: none; 
+    /* this will select the 
+        last child or the element i.e: span from the blog >> col2*/
 }
 .blog .col3 ul{
         list-style: none;
@@ -135,6 +140,8 @@ margin: 0.5em;
     content: "-";
     width: 1em;
     margin-left: -1em;
+    /* this will add (-) dash to all the li elements
+    under the ul tag.*/
 }
 
 .col3 li{
@@ -161,12 +168,11 @@ footer{
 
 }
 
-.footerWrapper div {
+.footerWrapper div{
     display: grid;
     justify-content: center;
     text-align: center;
     border: 2px solid red;
-
 }
 
 .footerWrapper span{
