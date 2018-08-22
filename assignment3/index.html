@@ -9,28 +9,30 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <script src="main.js"></script>
+
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <section class="logo">
+        <nav class="col nav">
+            <section class="logo col">
                 <img src="/assets/logo.jpg" alt="">
             </section>
-            <section class="navMenu">
-
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Products</li>
-                <li>Contact US</li>
-
+            <section class="navMenuWrapper col">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle" />
+                <div class="navMenu">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Services</a>
+                    <a href="#">Products</a>
+                    <a href="#">Contact Us</a>
+                </div>
             </section>
         </nav>
-        <section class="belowNavWrapper">
-            <section class="belowNavColLeft">
+        <section class="belowNavWrapper col">
+            <section class="belowNavColLeft ">
                 <div class="threeRoundImages">
                     <img src="/assets/Meeting.jpeg" alt="">
                     <img src="/assets/Flags.jpg" alt="">
@@ -53,12 +55,12 @@
             </section>
 
         </section>
-
+</header>
         <!-- ====================================================
         Blog starts from here, which is just above footer
     =====================================================     -->
-        <section class="blog">
-            <div class="col1">
+        <section class="blog col">
+            <div class="col1 ">
                 <h3>BLOG</h3>
                 <p>This website template has been designed
                     <br>
@@ -85,7 +87,7 @@
                 <img src="./assets/discussing.jpg" alt="discussing.jpg">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa et omnis nemo at, nihil nam eius deleniti?
                     Accusamus dolorum quam quia officiis possimus quos nemo fuga temporibus maiores iusto?</p>
-<span>Sept 21, by Nullam | 99 Views | 69 Comments</span>
+                <span>Sept 21, by Nullam | 99 Views | 69 Comments</span>
 
             </div>
             <div class="col3">
@@ -102,29 +104,29 @@
 
         </section>
 
-        <footer>
-            <section class="footerWrapper">
-                <div>
+        <footer class="col">
+            <section class="footerWrapper col">
+                <div class="el1">
                     <p>America</p>
                     <p>457-380-654 main</p>
                     <p>257-301-9417 toll free</p>
                 </div>
-                <div>
+                <div class="el2">
                     <p>Europe</p>
                     <p>457-380-654 main</p>
                     <p>257-301-9417 toll free</p>
                 </div>
-                <div>
+                <div class="el3">
                     <p>Canada</p>
                     <p>457-380-654 main</p>
                     <p>257-301-9417 toll free</p>
                 </div>
-                <div>
+                <div class="el4">
                     <p>Middle East</p>
                     <p>457-380-654 main</p>
                     <p>257-301-9417 toll free</p>
                 </div>
-                <div>
+                <div class="el5">
                     <p>FOLLOW US:</p>
                     <span>
                         <i class="fab fa-facebook-square"></i>
@@ -136,21 +138,7 @@
             <p class="copyRight">c. 2012. All rights reserved</p>
         </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </header>
+    
 </body>
 
 </html>

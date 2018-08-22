@@ -1,17 +1,39 @@
-.threeImage img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%
+nav {
+    grid-template-columns: 1fr;
+    background: white;
 }
-.belowNav{
-    border: solid 2px red;
 
+.logo {
+    width: 100%;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: center;
 }
-.belowNavWrapper{
+
+/* nav img {
+    display: block;
+    min-width: 100px;
+    min-height: 70px;
+    max-width: 100%;
+}
+ */
+.navMenu  ul {
+    list-style-type: none;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: space-around;
+    grid-gap: 2px;
+    background-color: white;
+    white-space: nowrap;
 }
-.smilingMan{
-    border: 2px solid red;
+
+ .list li {
+    background-color: #DCDDDB;
+    border-radius: 6%;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 3px 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }

@@ -1,15 +1,31 @@
-*{
-   box-sizing: border-box;
-   font-family: "Montserrat",sans-serif;
-   
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+
 }
-:root { /* Assaigning the color code, to be 
+
+}
+
+body {
+    margin: auto;
+/*     padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%; */
+    background: var(--LightGrey);
+}
+
+:root {
+    /* Assaigning the color code, to be 
     used below.*/
     --textBlue: #324e5c;
     --gradTop: #e2e9eb;
     --gradBot: #bed2d8;
     --blogSpan: #bbbbbb;
+    --LightGrey: #f4f5f6;
 }
+
 h3,
 h2,
 li,
@@ -18,48 +34,131 @@ p {
     color: var(--textBlue);
 }
 
+.col{
+    padding: 0 40px 0 40px ;
+   
 
+}
 /*=================================
-    NAVIGATION
+            NAVIGATION
 ==================================*/
+
 nav {
     display: grid;
-    grid-template-columns: repeat(minmax(250px, 1fr), auto-fit);
-    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
     width: 100%;
-    border: 2px solid blue;
-    background-color: #FFFFFF;
-}
+    background: white;
+    align-content: center;
+    border: red 2px solid;
 
+
+}
 
 .logo {
     display: grid;
     grid-auto-flow: column;
-    border: 2px solid red;
     align-content: center;
     justify-content: end;
+        border: #324e5c 2px solid;
+
 }
 
-.navMenu {
-    list-style-type: none;
+nav img {
+    display: block;
+    min-width: 100px;
+    min-height: 70px;
+    max-width: 100%;
+}
+
+.navMenuWrapper {
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 1em;
-    border: 2px solid yellow;
     align-content: center;
+    justify-content: end;
+    grid-gap: 0px;
+    background-color: white;
+    white-space: nowrap;
+    border: #324e5c 2px solid;
+    
+     
+
 }
 
-.navMenu li{
-    border: 2px solid #DCDDDB;
-    background-color: #DCDDDB;
-    border-radius: 6%;
-    text-align: center;
-    font-size: 2.01rem;
+.navMenu{
     
 }
+.navMenu a {
+    
+    text-align: center;
+    /* display: inline-block;
+      clear: right; */
+      white-space: nowrap;
+      text-decoration: none;
+      color: gray;
+      margin: 0 10px;
+      line-height: 70px;
+      padding: 1% 2% ;
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.8);
+      border-radius: 6%;
+      color: #324e5c;
+
+
+}
+.navMenuWrapper label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+.navMenuWrapper #toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .navMenuWrapper label {
+        display: block;
+        cursor: pointer;
+    }
+    .navMenu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .navMenu a {
+        display: block;
+        border-bottom: 8px ;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0 40px;
+        
+    }
+    #toggle:checked+.navMenu {
+        display: block;
+    }
+}
+
+
 /*============================================
     Below Navigation, 3 images and smilng man.
 ==============================================*/
+
+.belowNavWrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    background-image: linear-gradient(to bottom, var(--gradTop), var(--gradBot));
+    width: 100vw;
+    
+}
+
+.belowNavColLeft {
+    display: grid;
+}
+
 .threeRoundImages img {
     width: 150px;
     height: 150px;
@@ -67,28 +166,19 @@ nav {
     margin-top: 14%;
 }
 
-.belowNavColLeft {
-    border: solid 2px red;
-    display: grid;
-}
-
-.belowNavWrapper {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
-    border: 2px solid green;
-    background-image: linear-gradient(to bottom, var(--gradTop), var(--gradBot));
-}
 .smilingMan {
-    border: 2px solid red;
+    display: block;
+    max-width: 100%;
+    height: auto;
 
 }
+
 
 /*============================================
     Blog starts from here, it is above footer.
 ==============================================*/
 
-.blog{
+.blog {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     /* assigning the column size, medium col. is 2
@@ -96,43 +186,42 @@ nav {
     grid-gap: 1em;
     margin-bottom: 2em;
     line-height: 1.4em;
-
 }
 
-.blog span{
+.blog span {
     font-size: 0.8rem;
     color: var(--blogSpan);
     margin: 0.6rem 0 1rem 0;
     border-bottom: 1px dashed var(--blogSpan);
 }
 
-.blog .col1 span:last-child{
+.blog .col1 span:last-child {
     border: none;
 }
 
-.blog .col2 img{
-float: left;
-margin: 0.5em;
+.blog .col2 img {
+    float: left;
+    margin: 0.5em;
 }
 
-.blog .col2 h3{
+.blog .col2 h3 {
     text-transform: uppercase;
 }
 
-.blog .col2 span:first-child{
-    padding:100px;
+.blog .col2 span:first-child {
+    padding: 100px;
 }
 
-.blog .col2 span:last-child{
-    border: none; 
+.blog .col2 span:last-child {
+    border: none;
     /* this will select the 
         last child or the element i.e: span from the blog >> col2*/
 }
-.blog .col3 ul{
-        list-style: none;
-        margin-left: 0;
-        padding-left: 1em;
 
+.blog .col3 ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
 }
 
 .col3 ul>li:before {
@@ -144,41 +233,40 @@ margin: 0.5em;
     under the ul tag.*/
 }
 
-.col3 li{
-        border-bottom: 1px dashed var(--blogSpan);
+.col3 li {
+    border-bottom: 1px dashed var(--blogSpan);
 }
 
-.col3 li:last-child{
+.col3 li:last-child {
     border: none;
 }
 
-.col3 h3{
+.col3 h3 {
     text-transform: uppercase;
-
 }
+
 /*=============
     FOOTER
 ==============*/
-footer{
+
+footer {
     background-color: #DDDDDD;
 }
+
 .footerWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
 }
 
-.footerWrapper div{
+.footerWrapper div {
     display: grid;
     justify-content: center;
     text-align: center;
-    border: 2px solid red;
 }
 
-.footerWrapper span{
+.footerWrapper span {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 2px solid red;
     align-content: center;
     justify-content: center;
     grid-gap: 0px;
@@ -186,8 +274,7 @@ footer{
     padding: 0px;
 }
 
-i{
-    border: 2px solid yellow;
+i {
     font-size: 2em;
     margin: 1em;
 }
@@ -198,4 +285,80 @@ i{
     align-self: center;
     margin-top: 1em;
     color: grey;
+}
+
+/* ================================
+    Media Queries starts from here.
+===================================*/
+
+@media (max-width: 700px) {
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        background: white;
+        /* padding-bottom: 4em; */
+    }
+
+    .smilingMan {
+        display: none;
+    }
+    .threeRoundImages {
+        display: none;
+    }
+
+    .blog {
+        margin-top: 4em;
+        margin-bottom: 4em;
+        display: grid;
+        grid-template-columns: 1fr  ;
+        /* assigning the column size, medium col. is 2
+    times larger than the side col. */
+        grid-gap: 4em;
+        margin-bottom: 2em;
+        line-height: 1.4em;
+        font-size: 1.6em;
+    }
+    .text{
+        padding: 4em 0;
+        font-size: 2em;
+    }
+    .belowNavWrapper {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr ;
+        background-image: linear-gradient(to bottom, var(--gradTop), var(--gradBot));
+        width: 100vw;
+        /* padding-left: 2em;
+        padding-right: 2em; */
+    }
+    .footerWrapper {
+        padding-top: 4em;
+        display: grid;
+        grid-template-areas:"el1 el2"
+                            "el3 el4"
+                            "el5 el5";
+        grid-template-columns: 1fr 1fr ;
+        font-size: 1.4em;
+
+    }
+    .el1 {
+            grid-area: el1 ;
+    }
+    .el2 {
+        grid-area: el2;
+    }
+    .el3 {
+        grid-area: el3;
+    }
+    .el4 {
+        grid-area: el4;
+    }
+    .el5 {
+        grid-area: el5;
+    }
+
+
+
 }
