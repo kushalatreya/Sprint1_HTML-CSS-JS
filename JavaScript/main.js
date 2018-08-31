@@ -1,16 +1,3 @@
-console.log("Hello World!");
-var birthYear = 1995;
-var atomicRadius = 1.5e-5;
-var num1 = 3;
-var num2 = 100;
-var sum = num1 + num2;
-var diff = num2 - num1;
-var mult = num1 * num2;
-var div = num2 / num1;
-var rem = num2 % num1;
-console.log(`The sum of ${num1} and ${num2} is ${sum}`);
-console.log(`The div of ${num1} and ${num2} is ${div.toFixed(3)}`);
-console.log(`The rem of ${num1} and ${num2} is ${rem}`)
 
 
 
@@ -123,11 +110,12 @@ Print the array like this: Facebook, Google, Microsoft, Apple, Oracle and Amazon
 Sort the array using sort() method
 Reverse the array using reverse() method */
 
-var itCompanies = ["Facebook", "Google", "Microsoft", "IBM" , "Apple", "Oracle", "Amazon"];
+var itCompanies = ["Facebook", "Google", "Microsoft", "IBM", "Apple", "Oracle", "Amazon"];
 console.log(itCompanies);
-console.log(itCompanies.length);
+console.log(itCompanies.length + " companies");
 console.log(itCompanies.toString().toUpperCase());
-console.log(itCompanies.slice(0,6).join(" , ") + " and " .s )
+
+console.log(itCompanies.slice(0, 6).join(" , ") + " are big companies ")
 
 
 
@@ -141,10 +129,39 @@ for loop and print out the items. */
 /* 7. Declare a function name printArray.It takes array as a parameter and it prints out. 
  */
 
- 
-const array = [1, 2, 3, 4, 5, 6];
+
+
 function printArray(array) {
     console.log(array);
+
+};
+
+/* 8. Declare a function name reverseArray.It takes array as a parameter and it returns the reverse of the array
+(dont’ use method). */
+
+function reverseArray(array) {
+    console.log(array.reverse());
 }
 
+/* 11. Declare a function name sumOfNumbers.
+It takes a number parameter and it adds all the numbers in that range. */
 
+var ourArray = [];
+
+for (var i = 0; i <= 5; i++) {
+    if (i === 3000) {
+        break;
+    }
+    ourArray.push(i);
+    console.log(ourArray);
+}
+
+debugger;
+function sumOfNumbers(number) {
+    var sum = 0;
+    for (var i = 0; i <= number; i++){
+    sum = sum + i; 
+    }
+    return sum; 
+    console.log(sum);
+}
