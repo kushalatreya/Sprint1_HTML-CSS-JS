@@ -1,9 +1,16 @@
 
+/* 
+for (var i = 0; i <= 5; i++) {
+    if (i === 3000) {
+        break;
+    }
+    
+} */
 
 
 //The assignment starts from here:
 
-   
+
 
 
 //Q1.
@@ -26,30 +33,17 @@ console.log(company.trim());
 console.log(company.startsWith("Integrify Academy"));
 console.log(company.endsWith("Integrify Academy"));
 //completed. */
-/* 
-2.  Declare two variables myAge and yourAge and assign them initial values and log to browser console.
-    Output:
-I am 25 years old.
-You are 30 years old. */
 
-/* {
+//2.
+ {
     var myAge = 25;
     var yourAge = 30;
 
     console.log(`I am ${myAge} years old. \nYou are ${yourAge} years old.`)
-}; */
+}; 
 
 //completed
 
-/* 3. Get user input using prompt(“Enter your age: ”).If user is 18 or older, give feedback: You are old enough to drive but if not 18 give feedback to wait for the years he supposed to wait for.
-
-    Output:
-    Enter your age: 30
-You are old enough to drive.
-
-    Output:
-Enter your age: 15
-You are left with 3 years to drive. */
 /* 
 var drivingAge = 18;
 {
@@ -62,16 +56,12 @@ var drivingAge = 18;
         var remainingAge = 18 - age;
         document.write(`You are left with ${remainingAge} years to drive`);
     }
-}; */
+};  */
 
 //completed
 
 
-/* 4. Compare the values of myAge and yourAge using if … else.Based on the comparison log to console who is older(me or you).Use prompt(“Enter your age: ”) to get the age as input.
-    Output:
-Enter your age: 30
-You are 5 years older than me.
- */
+/* 4*/
 
 /* {
     var myAge = Number(prompt("Enter Your Age To Compare"));
@@ -98,6 +88,8 @@ console.log(itCompanies.reverse()); //reverse
 Iterate the array in question number 5 using a
 for loop and print out the items. */
 
+
+
 /* 7. Declare a function name printArray.It takes array as a parameter and it prints out. 
  */
 
@@ -115,22 +107,46 @@ function reverseArray(array) {
 /* 11. Declare a function name sumOfNumbers.
 It takes a number parameter and it adds all the numbers in that range. */
 
-var ourArray = [];
-
-for (var i = 0; i <= 5; i++) {
-    if (i === 3000) {
-        break;
+/* function sumOfNumbers(number){
+    let sum = 0;
+    for (let i=0; i <= number; i++){
+        sum = sum +i;
     }
-    ourArray.push(i);
-    console.log(ourArray);
-}
-
-debugger;
-function sumOfNumbers(number) {
-    var sum = 0;
-    for (var i = 0; i <= number; i++){
-    sum = sum + i; 
-    }
-    return sum; 
+    return sum;
     console.log(sum);
+}
+ */
+//Even or Odd
+
+/* function evenOrOdd(number){
+    
+    if (number % 2 === 0) {
+        console.log(`the ${number} is even ` );
+    } else {
+        console.log("odd")
+    }
+} */
+
+
+
+function sumOfEvensAndOdds(number){
+    let oddSum = 0; //counter
+    let evenSum = 0;
+    for (let i = 0; i <= number; i += 1){ //takes alternative numbers
+        if (i % 2 === 0){ //checks if the number is even or odd.
+            evenSum++;
+        }
+
+        else{
+            oddSum++;
+        }
+    }
+
+    console.log(oddSum);
+    console.log(evenSum);
+}
+sumOfEvensAndOdds(100);
+
+
+
 }
