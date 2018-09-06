@@ -32,7 +32,6 @@ function userIdGeneratedByUser(){
    
     userIdGeneratedByUser();
 
-    //loop this bitch
 
     //rgb color generator
 
@@ -115,27 +114,36 @@ function userIdGeneratedByUser(characterNumber) {
         }
     console.log(generatedId);
 }
-let characters = Number(prompt("enter the length "));
-let numberOfIds = Number(prompt("enter the number "));
+let characters = Number(prompt("enter the length of the ids "));
+let numberOfIds = Number(prompt("enter the number of ids to generate"));
+
+//looping 
 
 function multiTimes(numberOfIds, characters) {
 for (let i = 0; i < numberOfIds; i++) {
     userIdGeneratedByUser(characters)
 }
 }
-multiTimes(numberOfIds, characters);*/
+multiTimes(numberOfIds, characters);
 
 function lotteryNumerGenerator(){
     let randomLotteryNumber = '#';
-    for(let i = 0; i<7; i++ ){
+    for(let i = 0; i <7; i++ ){
          randomLotteryNumber += Math.floor(Math.random() * 9) + 1 + ' '
-
     }
     console.log(randomLotteryNumber);
-
 }
 lotteryNumerGenerator();
 
-function loopingLottery(){
-    
+//looping -- it will print out the lottery as per users need.
+const callTimes = Number(prompt('enter number of times you want to generate the lottery numbers.'));
+
+function loopingLottery(callTimes){
+    for (let i = 0; i < callTimes; i++){
+        lotteryNumerGenerator()
+    }
 }
+loopingLottery(callTimes);
+
+//Array */
+
